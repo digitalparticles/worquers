@@ -1,72 +1,403 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Worquers — the workforce operating system for critical infrastructure." />
-  <title>Worquers — Deploy the Workforce</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#071923">
+
+  <meta name="description"
+    content="Worquers connects skilled infrastructure professionals with the companies building the next generation of data centers. Find projects or request a crew.">
+
+  <title>WORQUERS — Build What's Next</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+  <!-- HEADER -->
+
   <header class="site-header">
-    <a class="logo" href="#top" aria-label="Worquers home"><span class="logo-mark">W<span
-          class="logo-dot">.</span></span> WORQUERS</a>
-    <nav aria-label="Main navigation"><a href="#platform">Platform</a><a href="#how">How it works</a><a
-        href="mailto:info@worquers.com">Contact</a></nav>
-    <a class="nav-cta" href="mailto:hire@worquers.com?subject=Deploy%20a%20team">Deploy a Team <span
-        aria-hidden="true">↗</span></a>
+    <div class="nav-inner">
+
+      <a href="#top" class="brand" aria-label="Worquers home">
+        <span class="brand-mark">W<span>.</span></span>
+        <span class="brand-name">WORQUERS</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#platform">Platform</a>
+        <a href="#professionals">For Professionals</a>
+        <a href="#companies">For Companies</a>
+      </nav>
+
+      <a class="nav-cta" href="mailto:hire@worquers.com?subject=Request%20a%20Crew">
+        REQUEST A CREW <span aria-hidden="true">↗</span>
+      </a>
+
+      <details class="mobile-nav">
+        <summary aria-label="Open navigation menu">
+          <span class="hamburger"></span>
+        </summary>
+        <nav aria-label="Mobile navigation">
+          <a href="#platform">Platform</a>
+          <a href="#professionals">For Professionals</a>
+          <a href="#companies">For Companies</a>
+          <a href="mailto:info@worquers.com">Contact</a>
+        </nav>
+      </details>
+
+    </div>
   </header>
+
+
   <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
       <div class="hero-photo" aria-hidden="true"></div>
+
       <div class="hero-content">
-        <p class="eyebrow"><span class="status-dot"></span> THE INFRASTRUCTURE WORKFORCE OS</p>
-        <h1 id="hero-title">BUILD THE FUTURE.<br><span>DEPLOY THE WORKFORCE.</span></h1>
-        <p class="hero-copy">Qualified crews. Coordinated execution. One platform to power the next generation of
-          critical infrastructure.</p>
-        <div class="actions"><a class="button button-primary"
-            href="mailto:hire@worquers.com?subject=Deploy%20a%20team">Deploy a Team <span
-              aria-hidden="true">↗</span></a><a class="button button-outline"
-            href="mailto:contractor@worquers.com?subject=Join%20Worquers">Join the Workforce <span
-              aria-hidden="true">→</span></a></div>
+
+        <p class="eyebrow">
+          <span class="accent-dot"></span>
+          THE INFRASTRUCTURE WORKFORCE PLATFORM
+        </p>
+
+        <h1>
+          BUILD<br>
+          WHAT'S NEXT<span class="lime">.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          WITH THE RIGHT PEOPLE.
+        </p>
+
+        <p class="hero-description">
+          Connecting skilled infrastructure professionals
+          with the companies building the next generation
+          of data centers and AI infrastructure.
+        </p>
+
+        <div class="hero-actions">
+
+          <a class="button button-primary"
+            href="mailto:contractor@worquers.com?subject=Join%20the%20Worquers%20Workforce">
+            FIND YOUR NEXT PROJECT
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="button button-secondary" href="mailto:hire@worquers.com?subject=Request%20a%20Crew">
+            HIRE A TEAM
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
       </div>
-      <div class="hero-footer"><span>BUILT FOR MISSION-CRITICAL PROJECTS</span><span>SCROLL TO EXPLORE ↓</span></div>
-    </section>
-    <section class="intro section" id="platform">
-      <p class="section-kicker">01 / THE PLATFORM</p>
-      <div>
-        <h2>More than staffing.<br><span>Infrastructure execution.</span></h2>
-        <p>Worquers connects specialized field talent with the teams building data centers and digital infrastructure —
-          from workforce deployment to structured project delivery.</p>
+
+      <div class="hero-bottom">
+        <span>INFRASTRUCTURE / WORKFORCE / EXECUTION</span>
+        <span>SCROLL TO EXPLORE ↓</span>
       </div>
+
     </section>
-    <section class="capabilities section" id="how">
-      <p class="section-kicker">02 / WHAT WE ENABLE</p>
-      <div class="cards">
-        <article><span>01</span>
-          <h3>Source</h3>
-          <p>Find skilled technicians and experienced field leaders for demanding infrastructure projects.</p>
-        </article>
-        <article><span>02</span>
-          <h3>Deploy</h3>
-          <p>Assemble crews around site requirements, scopes of work, and project schedules.</p>
-        </article>
-        <article><span>03</span>
-          <h3>Execute</h3>
-          <p>Coordinate pulling, patching, labeling, testing, and validation in one operational workflow.</p>
-        </article>
+
+
+    <!-- PLATFORM -->
+
+    <section class="platform section" id="platform">
+
+      <div class="section-photo platform-photo" aria-hidden="true"></div>
+
+      <div class="section-inner">
+
+        <p class="section-label">
+          01 <span>/</span> THE PLATFORM
+        </p>
+
+        <div class="platform-grid">
+
+          <h2>
+            BEYOND<br>
+            <span>STAFFING.</span>
+          </h2>
+
+          <div class="platform-copy">
+
+            <h3>
+              BUILT FOR EXECUTION.
+            </h3>
+
+            <p>
+              The next generation of infrastructure
+              demands more than simply finding people.
+              It requires the right skills, coordinated
+              teams, and a clear path from deployment
+              to delivery.
+            </p>
+
+            <p>
+              Worquers is building one connected
+              platform for infrastructure workforce
+              sourcing, crew deployment, and
+              field operations.
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
-    <section class="closing section">
-      <p class="section-kicker">LET'S BUILD</p>
-      <h2>THE NEXT GENERATION<br>DOESN'T BUILD ITSELF.</h2><a class="button button-primary"
-        href="mailto:info@worquers.com?subject=Let's%20talk">Get in Touch ↗</a>
+
+
+    <!-- FOR PROFESSIONALS -->
+
+    <section class="professionals section" id="professionals">
+
+      <div class="section-inner">
+
+        <p class="section-label">
+          02 <span>/</span> FOR PROFESSIONALS
+        </p>
+
+        <div class="split-layout">
+
+          <div>
+            <h2>
+              YOUR SKILLS.<br>
+              <span>THE NEXT FRONTIER.</span>
+            </h2>
+          </div>
+
+          <div class="section-copy">
+
+            <p>
+              Your experience helps power the
+              world's most ambitious infrastructure
+              projects. Discover opportunities
+              aligned with your technical skills
+              and career goals.
+            </p>
+
+            <p>
+              Whether you're a cable technician,
+              fiber specialist, team lead, or
+              experienced field professional,
+              take the next step with Worquers.
+            </p>
+
+            <a class="text-cta" href="mailto:contractor@worquers.com?subject=Workforce%20Application">
+              JOIN THE WORKFORCE
+              <span aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
+
+
+    <!-- FOR COMPANIES -->
+
+    <section class="companies section" id="companies">
+
+      <div class="section-photo companies-photo" aria-hidden="true"></div>
+
+      <div class="section-inner">
+
+        <p class="section-label">
+          03 <span>/</span> FOR COMPANIES
+        </p>
+
+        <div class="split-layout">
+
+          <div>
+            <h2>
+              THE RIGHT CREW.<br>
+              <span>THE RIGHT PROJECT.</span>
+            </h2>
+          </div>
+
+          <div class="section-copy">
+
+            <p>
+              Build with confidence. Connect with
+              skilled infrastructure professionals
+              and field teams matched to your
+              project's scope, schedule, and
+              technical requirements.
+            </p>
+
+            <p>
+              From individual technicians to
+              coordinated installation crews,
+              Worquers helps you take the next
+              step toward reliable project delivery.
+            </p>
+
+            <a class="text-cta" href="mailto:hire@worquers.com?subject=Request%20a%20Crew">
+              REQUEST A CREW
+              <span aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CAPABILITIES -->
+
+    <section class="capabilities section" id="capabilities">
+
+      <div class="section-photo capabilities-photo" aria-hidden="true"></div>
+
+      <div class="section-inner">
+
+        <p class="section-label">
+          04 <span>/</span> WHAT WE'RE BUILDING
+        </p>
+
+        <h2 class="capabilities-heading">
+          ONE CONNECTED<br>
+          <span>WORKFORCE PLATFORM.</span>
+        </h2>
+
+        <div class="capability-grid">
+
+          <article class="capability">
+            <span class="capability-number">01</span>
+            <h3>SOURCE</h3>
+            <p>
+              Connect with professionals who
+              have the skills and experience
+              your projects require.
+            </p>
+          </article>
+
+          <article class="capability">
+            <span class="capability-number">02</span>
+            <h3>DEPLOY</h3>
+            <p>
+              Build teams around project
+              requirements, site schedules,
+              and technical capabilities.
+            </p>
+          </article>
+
+          <article class="capability">
+            <span class="capability-number">03</span>
+            <h3>EXECUTE</h3>
+            <p>
+              Bring workforce coordination,
+              installation workflows, and
+              project visibility together.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CLOSING CTA -->
+
+    <section class="closing section" id="contact">
+
+      <div class="section-photo closing-photo" aria-hidden="true"></div>
+
+      <div class="section-inner closing-inner">
+
+        <p class="section-label">
+          THE FUTURE IS UNDER CONSTRUCTION
+        </p>
+
+        <h2>
+          THE FUTURE<br>
+          DOESN'T BUILD ITSELF<span class="lime">.</span>
+        </h2>
+
+        <p class="closing-description">
+          Whether you're looking for your next
+          project or the team to deliver one,
+          your next step starts here.
+        </p>
+
+        <div class="hero-actions closing-actions">
+
+          <a class="button button-primary" href="mailto:contractor@worquers.com?subject=Join%20Worquers">
+            JOIN THE WORKFORCE
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="button button-secondary" href="mailto:hire@worquers.com?subject=Request%20a%20Crew">
+            REQUEST A CREW
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
-  <footer><a class="logo" href="#top">W<span class="logo-dot">.</span> WORQUERS</a><span>© 2026 Worquers. Built for what
-      comes next.</span><a href="mailto:info@worquers.com">info@worquers.com</a></footer>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div class="footer-top">
+
+      <a href="#top" class="brand">
+        <span class="brand-mark">W<span>.</span></span>
+        <span class="brand-name">WORQUERS</span>
+      </a>
+
+      <p>
+        BUILDING THE WORKFORCE LAYER<br>
+        FOR CRITICAL INFRASTRUCTURE.
+      </p>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <span>© 2026 WORQUERS</span>
+
+      <a href="mailto:info@worquers.com">
+        INFO@WORQUERS.COM
+      </a>
+
+      <span>BUILT FOR WHAT COMES NEXT.</span>
+
+    </div>
+
+  </footer>
+
 </body>
 
 </html>
