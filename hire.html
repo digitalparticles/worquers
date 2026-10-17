@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071923">
+
+  <meta name="description"
+    content="Request individual data center technicians, a complete crew, or a team with on-site leadership from Worquers.">
+  <title>Request Workforce | Worquers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #071923;
+      --panel: #0d2935;
+      --line: #294b53;
+      --text: #f0f7f7;
+      --muted: #b8cdd0;
+      --lime: #95d663;
+      --teal: #3aa675
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.55 'DM Sans', Arial, sans-serif
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      background: #09212b;
+      color: var(--text);
+      padding: 12px;
+      min-height: 46px
+    }
+
+    textarea {
+      min-height: 96px;
+      resize: vertical
+    }
+
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    button:focus-visible,
+    a:focus-visible {
+      outline: 2px solid var(--lime);
+      outline-offset: 2px
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      color: #dce9e9
+    }
+
+    label>span {
+      display: block;
+      margin-bottom: 7px
+    }
+
+    small,
+    .hint {
+      color: var(--muted)
+    }
+
+    .wrap {
+      width: min(1100px, calc(100% - 36px));
+      margin: auto
+    }
+
+    .top {
+      border-bottom: 1px solid var(--line)
+    }
+
+    .top .wrap {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px
+    }
+
+    .logo {
+      font: 700 17px 'Space Grotesk', sans-serif;
+      letter-spacing: .12em
+    }
+
+    .logo b {
+      font-size: 25px;
+      color: var(--lime);
+      margin-right: 8px
+    }
+
+    .back {
+      font-size: 12px;
+      color: var(--muted)
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      padding: 80px 0 54px;
+      background: linear-gradient(90deg, rgba(7, 25, 35, .86), rgba(7, 25, 35, .62)), url('worquers-background-images/hero-datacenter.jpg') center/cover
+    }
+
+    .hero:after {
+      content: '';
+      position: absolute;
+      inset: auto 0 0;
+      height: 60px;
+      background: linear-gradient(transparent, var(--bg));
+      z-index: -1
+    }
+
+    .eyebrow,
+    .section-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .17em;
+      color: var(--lime)
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      line-height: 1.15;
+      letter-spacing: -.045em
+    }
+
+    h1 {
+      font-size: clamp(39px, 6vw, 68px);
+      margin: 16px 0
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--lime)
+    }
+
+    .hero p:last-child {
+      max-width: 650px;
+      color: #e1ebed;
+      font-size: 16px
+    }
+
+    .section {
+      padding: 38px 0;
+      border-bottom: 1px solid var(--line)
+    }
+
+    h2 {
+      font-size: clamp(24px, 3vw, 34px);
+      margin: 6px 0 14px
+    }
+
+    .options {
+      display: grid;
+      gap: 12px;
+      margin: 20px 0
+    }
+
+    .choice {
+      display: block;
+      position: relative;
+      border: 1px solid var(--line);
+      background: rgba(13, 41, 53, .85);
+      padding: 19px;
+      cursor: pointer
+    }
+
+    .choice:has(input:checked) {
+      border-color: var(--lime);
+      background: #14342e
+    }
+
+    .choice input {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 18px;
+      height: 18px;
+      min-height: auto;
+      accent-color: var(--lime)
+    }
+
+    .choice strong {
+      display: block;
+      margin-right: 27px;
+      font: 600 18px 'Space Grotesk', sans-serif
+    }
+
+    .choice small {
+      display: block;
+      max-width: 290px;
+      margin-top: 8px;
+      font-size: 12px;
+      line-height: 1.55
+    }
+
+    .clarity {
+      border-left: 2px solid var(--teal);
+      padding: 12px 16px;
+      background: #0a2530;
+      color: #d4e5e4;
+      font-size: 13px
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px
+    }
+
+    .field-title {
+      color: var(--lime);
+      font-size: 12px;
+      letter-spacing: .12em;
+      font-weight: 700;
+      margin: 24px 0 14px
+    }
+
+    .role {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 12px 0;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 14px
+    }
+
+    .role .role-name {
+      grid-column: 1/-1;
+      font-weight: 600
+    }
+
+    .role .role-name small {
+      display: block;
+      font-weight: 400;
+      font-size: 12px
+    }
+
+    .work-types {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px
+    }
+
+    .tick {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      min-height: 35px
+    }
+
+    .tick input {
+      width: 17px;
+      height: 17px;
+      min-height: auto;
+      accent-color: var(--lime)
+    }
+
+    .tick span {
+      font-size: 13px
+    }
+
+    .submit-area {
+      padding: 32px 0 70px
+    }
+
+    .btn {
+      background: var(--lime);
+      color: #071923;
+      border: 0;
+      min-height: 54px;
+      padding: 14px 27px;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .08em;
+      cursor: pointer
+    }
+
+    .btn:hover {
+      background: #b5e57d
+    }
+
+    .fine {
+      font-size: 12px;
+      color: var(--muted);
+      max-width: 700px
+    }
+
+    .status {
+      margin-top: 16px;
+      min-height: 20px;
+      color: var(--lime)
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 26px 0;
+      color: var(--muted);
+      font-size: 12px
+    }
+
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #90aab0
+    }
+
+    @media(min-width:680px) {
+      .options {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .work-types {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .role {
+        grid-template-columns: 2fr 1fr 1fr
+      }
+
+      .role .role-name {
+        grid-column: auto
+      }
+
+      .hero {
+        padding: 92px 0 72px
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="top">
+    <div class="wrap"><a href="index.html" class="logo"><b>W.</b> WORQUERS</a><a class="back" href="index.html">BACK TO
+        HOME</a></div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">FOR INFRASTRUCTURE COMPANIES</div>
+        <h1>THE RIGHT PEOPLE.<br><em>THE RIGHT PROJECT.</em></h1>
+        <p>Tell us what you need. We'll review your request and discuss the right workforce solution for your project.
+        </p>
+      </div>
+    </section>
+    <form id="crewForm" class="wrap" novalidate>
+      <section class="section">
+        <div class="section-tag">01 / SERVICE MODEL</div>
+        <h2>What kind of support do you need?</h2>
+        <div class="options" role="radiogroup" aria-label="Workforce support type">
+          <label class="choice"><input type="radio" name="service_model" value="Individual Technicians" required
+              checked><strong>Individual Technicians</strong><small>Fill individual roles within your existing team.
+              Your company manages the work.</small></label>
+          <label class="choice"><input type="radio" name="service_model" value="Complete Crew"><strong>Complete
+              Crew</strong><small>Request multiple workers. Your company provides daily supervision and quality
+              oversight.</small></label>
+          <label class="choice"><input type="radio" name="service_model"
+              value="Team with On-Site Leadership"><strong>Team with On-Site Leadership</strong><small>Workers plus a
+              team lead or foreman to coordinate daily field activity under an agreed scope.</small></label>
+        </div>
+        <p class="clarity">Leadership is not the same as turnkey delivery. Responsibility for scope, safety, quality,
+          and acceptance is defined in the final agreement.</p>
+      </section>
+      <section class="section">
+        <div class="section-tag">02 / CREW REQUIREMENTS</div>
+        <h2>Build your workforce</h2>
+        <div class="role">
+          <div class="role-name">Data Center / Cable Technicians<small>Pulling, routing, dressing, patching,
+              labeling, testing, validation</small></div><label><span>Quantity</span><input name="technicians_needed"
+              type="number" min="0" max="1000" value="0" required></label><label><span>Min. experience
+              years</span><input name="technician_years" type="number" min="0" max="50" placeholder="e.g. 2"></label>
+        </div>
+        <div class="role">
+          <div class="role-name">Team Leads</div><label><span>Quantity</span><input name="team_leads_needed"
+              type="number" min="0" max="1000" value="0" required></label><label><span>Min. experience
+              years</span><input name="team_lead_years" type="number" min="0" max="50" placeholder="e.g. 5"></label>
+        </div>
+        <div class="role">
+          <div class="role-name">Foremen</div><label><span>Quantity</span><input name="foremen_needed" type="number"
+              min="0" max="1000" value="0" required></label><label><span>Min. experience years</span><input
+              name="foreman_years" type="number" min="0" max="50" placeholder="e.g. 7"></label>
+        </div>
+        <div class="grid"><label><span>Other roles / quantities</span><input name="other_roles"
+              placeholder="e.g. 2 fiber testers"></label><label><span>Certifications / safety requirements</span><input
+              name="certifications" placeholder="e.g. OSHA 10, BICSI"></label></div>
+        <div class="field-title">WORK SCOPE</div>
+        <div class="work-types">
+          <label class="tick"><input type="checkbox" name="work" value="Pulling"><span>Pulling</span></label><label
+            class="tick"><input type="checkbox" name="work" value="Dressing / Routing"><span>Dressing /
+              routing</span></label><label class="tick"><input type="checkbox" name="work"
+              value="Patching"><span>Patching</span></label><label class="tick"><input type="checkbox" name="work"
+              value="Labeling"><span>Labeling</span></label><label class="tick"><input type="checkbox" name="work"
+              value="Termination"><span>Termination</span></label><label class="tick"><input type="checkbox" name="work"
+              value="Testing"><span>Testing / certification</span></label><label class="tick"><input type="checkbox"
+              name="work" value="Fiber splicing"><span>Fiber splicing</span></label><label class="tick"><input
+              type="checkbox" name="work" value="QA / QC"><span>QA / QC</span></label><label class="tick"><input
+              type="checkbox" name="work" value="Documentation"><span>Documentation</span></label>
+        </div>
+        <div class="grid" style="margin-top:18px"><label><span>Cabling / project details</span><input
+              name="cable_details" placeholder="e.g. 100 racks, Cat6A + fiber"></label><label><span>Project
+              type</span><select name="project_type">
+              <option>New data hall</option>
+              <option>Expansion</option>
+              <option>Retrofit / upgrade</option>
+              <option>Other</option>
+            </select></label></div>
+      </section>
+      <section class="section">
+        <div class="section-tag">03 / PROJECT & COMPENSATION</div>
+        <h2>Where, when, and how?</h2>
+        <div class="grid">
+          <label><span>Site city & state *</span><input name="project_location" required
+              placeholder="e.g. Memphis, TN"></label>
+          <label><span>Target start date *</span><input type="date" name="start_date" required></label>
+          <label><span>Duration (weeks) *</span><input type="number" name="duration_weeks" min="1" max="260" required
+              placeholder="e.g. 8"></label>
+          <label><span>Hours per worker / week *</span><input type="number" name="hours_per_week" min="1" max="112"
+              required placeholder="e.g. 50"></label>
+          <label><span>Shift</span><select name="shift">
+              <option>Day</option>
+              <option>Night</option>
+              <option>Rotating</option>
+              <option>Multiple shifts</option>
+            </select></label>
+          <label><span>Working days</span><select name="working_days">
+              <option value="">To discuss</option>
+              <option>Monday–Friday</option>
+              <option>6 days per week</option>
+              <option>7 days per week</option>
+              <option>Custom schedule</option>
+            </select></label>
+          <label><span>Overtime</span><select name="overtime_required">
+              <option value="">To discuss</option>
+              <option value="true">Required</option>
+              <option value="false">Not required</option>
+            </select></label>
+          <label><span>Start date flexible?</span><select name="start_date_flexible">
+              <option value="">To discuss</option>
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select></label>
+          <label><span>Site readiness</span><select name="site_readiness">
+              <option value="">Not confirmed</option>
+              <option>Ready</option>
+              <option>Expected by start date</option>
+              <option>Not yet ready</option>
+            </select></label>
+          <label><span>Contract type</span><select name="contract_type">
+              <option>Temporary contract</option>
+              <option>Temp-to-hire</option>
+              <option>Ongoing assignment</option>
+              <option>Other</option>
+            </select></label>
+          <label><span>Rate basis</span><select name="rate_basis">
+              <option>Target worker pay / hour (USD)</option>
+              <option>Client bill-rate budget / hour (USD)</option>
+              <option>To discuss</option>
+            </select></label>
+          <label><span>Technician hourly rate (USD)</span><input name="hourly_rate_technician" type="number" min="0"
+              step="0.01" placeholder="Optional"></label>
+          <label><span>Team Lead hourly rate (USD)</span><input name="hourly_rate_team_lead" type="number" min="0"
+              step="0.01" placeholder="Optional"></label>
+          <label><span>Foreman hourly rate (USD)</span><input name="hourly_rate_foreman" type="number" min="0"
+              step="0.01" placeholder="Optional"></label>
+        </div>
+        <div class="field-title">TRAVEL & BENEFITS</div>
+        <div class="work-types"><label class="tick"><input type="checkbox" name="perks" value="Per diem"><span>Per
+              diem</span></label><label class="tick"><input type="checkbox" name="perks"
+              value="Lodging"><span>Lodging</span></label><label class="tick"><input type="checkbox" name="perks"
+              value="Travel reimbursement"><span>Travel reimbursement</span></label><label class="tick"><input
+              type="checkbox" name="perks" value="Tools provided"><span>Tools provided</span></label><label
+            class="tick"><input type="checkbox" name="perks" value="Overtime expected"><span>Overtime
+              expected</span></label><label class="tick"><input type="checkbox" name="perks"
+              value="PPE provided"><span>PPE provided</span></label></div>
+        <div class="grid" style="margin-top:18px">
+          <label><span>Per diem amount (USD / day)</span><input name="per_diem_amount" type="number" min="0" max="10000"
+              step="0.01" placeholder="Optional"></label>
+          <label><span>Accommodation</span><select name="accommodation">
+              <option value="">To discuss</option>
+              <option>Provided by client</option>
+              <option>Allowance / reimbursement</option>
+              <option>Not provided</option>
+            </select></label>
+          <label><span>Travel expenses</span><select name="travel_expenses">
+              <option value="">To discuss</option>
+              <option>Covered by client</option>
+              <option>Reimbursed</option>
+              <option>Not covered</option>
+            </select></label>
+          <label><span>Tools provided by</span><select name="tools_provided_by">
+              <option value="">To discuss</option>
+              <option>Client</option>
+              <option>Workers</option>
+              <option>Combination</option>
+            </select></label>
+          <label><span>Employment arrangement</span><select name="employment_arrangement">
+              <option value="">To discuss</option>
+              <option>Temporary staffing</option>
+              <option>Temp-to-hire</option>
+              <option>Project subcontract</option>
+              <option>Other</option>
+            </select></label>
+          <label><span>Required certifications</span><input name="certifications_required"
+              placeholder="e.g. OSHA 10, BICSI"></label>
+          <label><span>Cable types</span><input name="cable_types" placeholder="e.g. Cat6A, OS2 fiber, OM4"></label>
+          <label><span>Site access / clearance notes</span><input name="site_access_requirements"
+              placeholder="e.g. orientation, screening"></label><label><span>Workforce supervision</span><select
+              name="supervision">
+              <option>Client directs day-to-day work</option>
+              <option>On-site lead requested</option>
+              <option>To discuss</option>
+            </select></label>
+        </div>
+        <label style="margin-top:16px"><span>Additional requirements</span><textarea name="additional_requirements"
+            maxlength="2000"
+            placeholder="Special equipment, screening, site rules, milestones or other requirements"></textarea></label>
+      </section>
+      <section class="section">
+        <div class="section-tag">04 / COMPANY CONTACT</div>
+        <h2>Who should we contact?</h2>
+        <div class="grid"><label><span>Company *</span><input name="company_name" autocomplete="organization"
+              required></label><label><span>Your name *</span><input name="contact_name" autocomplete="name"
+              required></label><label><span>Work email *</span><input name="contact_email" type="email"
+              autocomplete="email" required></label><label><span>Phone *</span><input name="contact_phone"
+              autocomplete="tel" required></label></div>
+        <label style="margin-top:16px"><span>Anything else we should know?</span><textarea name="project_description"
+            maxlength="2000"
+            placeholder="Scope, schedule, constraints, approval process or other details"></textarea></label>
+      </section>
+      <div class="submit-area">
+        <p class="fine">Submitting sends your workforce inquiry to Worquers for review. By submitting, you acknowledge
+          our <a style="text-decoration:underline" href="privacy.html">Privacy Policy</a>. No staffing or deployment is
+          guaranteed.</p><button class="btn" id="submitButton" style="margin-top:18px" type="submit">SUBMIT CREW
+          REQUEST</button>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <div class="wrap"><span>© 2026 WORQUERS</span><span><a href="privacy.html">PRIVACY</a> &nbsp; <a
+          href="terms.html">TERMS</a> &nbsp; <a href="mailto:info@worquers.com">CONTACT</a></span></div>
+  </footer>
+  <script>
+    // Public endpoint only. Never put a Supabase secret/service-role key in this file.
+    const FUNCTION_URL = "https://begudxvyjlhcquzptxom.supabase.co/functions/v1/submit-crew-request";
+    const form = document.getElementById("crewForm");
+    const statusEl = document.getElementById("status");
+    const submitButton = document.getElementById("submitButton");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      const roles = ["technicians_needed", "team_leads_needed", "foremen_needed"];
+      if (roles.every(k => Number(data.get(k) || 0) === 0) && !String(data.get("other_roles") || "").trim()) {
+        statusEl.textContent = "Please request at least one position.";
+        return;
+      }
+      const payload = {};
+      for (const [key, value] of data.entries()) {
+        if (key === "work" || key === "perks") continue;
+        payload[key] = String(value).trim();
+      }
+      payload.work_types = data.getAll("work").map(String);
+      payload.perks = data.getAll("perks").map(String);
+      submitButton.disabled = true;
+      submitButton.textContent = "SUBMITTING...";
+      statusEl.textContent = "Sending your request securely...";
+      try {
+        const response = await fetch(FUNCTION_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || !result.ok) throw new Error(result.error || "Unable to submit. Please try again.");
+        form.reset();
+        statusEl.textContent = "Request received. Thank you — Worquers will review your inquiry.";
+        submitButton.textContent = "REQUEST SENT";
+      } catch (error) {
+        statusEl.textContent = error.message || "Something went wrong. Please try again.";
+        submitButton.disabled = false;
+        submitButton.textContent = "SUBMIT CREW REQUEST";
+      }
+    });
+  </script>
+</body>
+
+</html>
