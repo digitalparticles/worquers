@@ -271,30 +271,36 @@ h1 span {
     gap: 12px;
 }
 
+
+/* WORQUERS — MINIMALIST BUTTONS */
+
 .btn {
     display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 28px;
-    min-height: 55px;
-    padding: 16px 22px;
+    justify-content: center;
 
+    min-height: 56px;
+    padding: 18px 30px;
+
+    font-family: var(--font);
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
+    text-align: center;
 
+    border-radius: 0;
     transition:
-        background .2s,
-        transform .2s;
+        background-color 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
+    transform: none;
 }
 
 .btn-primary {
     background: var(--lime);
-    color: #071923;
+    color: var(--bg);
 }
 
 .btn-primary:hover {
@@ -302,14 +308,16 @@ h1 span {
 }
 
 .btn-outline {
-    background: rgba(7, 25, 35, 0.38);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(7, 25, 35, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.55);
     color: var(--white);
 }
 
 .btn-outline:hover {
-    background: rgba(255, 255, 255, 0.13);
+    border-color: var(--lime);
+    background: rgba(7, 25, 35, 0.75);
 }
+
 
 .hero-bottom {
     position: absolute;
