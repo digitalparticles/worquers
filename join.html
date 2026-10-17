@@ -4,50 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="theme-color" content="#071923">
 
     <meta name="description"
-        content="Join Worquers. Explore potential nationwide data center and infrastructure project opportunities.">
+        content="Join the Worquers infrastructure workforce. Send a one-page résumé for potential nationwide data center projects.">
 
-    <title>Join the Workforce | Worquers</title>
+    <title>Join Worquers | Your Next Project</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
         rel="stylesheet">
 
     <style>
         :root {
             color-scheme: dark;
             --bg: #071923;
-            --surface: #0b2632;
             --white: #f4f8fa;
-            --muted: #b7c9ce;
+            --muted: #bdced2;
             --lime: #95d663;
-            --line: rgba(180, 220, 220, .18);
+            --line: rgba(180, 220, 220, .22);
         }
 
         * {
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             margin: 0;
             background: var(--bg);
             color: var(--white);
-            font-family: "DM Sans", Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
+            font-family: "DM Sans", sans-serif;
         }
 
         a {
-            color: inherit;
             text-decoration: none;
+            color: inherit;
         }
 
         a:focus-visible {
@@ -55,33 +47,18 @@
             outline-offset: 4px;
         }
 
-        h1,
-        h2,
-        h3,
-        p {
-            margin-top: 0;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: "Space Grotesk", sans-serif;
-        }
-
         .container {
-            width: min(100% - 40px, 1080px);
-            margin-inline: auto;
+            width: min(100% - 44px, 1100px);
+            margin: auto;
         }
 
-        /* HEADER */
-
-        .header {
+        header {
             border-bottom: 1px solid var(--line);
-            background: rgba(7, 25, 35, .95);
+            background: var(--bg);
         }
 
-        .header-inner {
-            min-height: 80px;
+        .navigation {
+            min-height: 76px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -91,305 +68,188 @@
         .brand {
             font-family: "Space Grotesk", sans-serif;
             font-weight: 700;
-            letter-spacing: .11em;
-            font-size: 15px;
-            white-space: nowrap;
+            letter-spacing: .12em;
+            font-size: 14px;
         }
 
         .brand strong {
             color: var(--lime);
-            font-size: 27px;
-            letter-spacing: -.1em;
-            margin-right: 12px;
+            font-size: 26px;
+            margin-right: 10px;
         }
 
         .back {
+            color: var(--muted);
             font-size: 11px;
             letter-spacing: .08em;
-            color: var(--muted);
         }
 
-        .back:hover {
-            color: var(--lime);
-        }
-
-        /* HERO */
-
-        .hero {
+        main {
             position: relative;
-            min-height: 450px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
             isolation: isolate;
-            padding: 90px 0;
+            min-height: calc(100svh - 145px);
+            padding: 65px 0 80px;
+            overflow: hidden;
         }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: -2;
-
-            background:
-                linear-gradient(90deg,
-                    rgba(7, 25, 35, .92),
-                    rgba(7, 25, 35, .60)),
-                url("worquers-background-images/hero-datacenter.jpg") center / cover no-repeat;
-        }
-
-        .hero::after {
+        main::before {
             content: "";
             position: absolute;
             inset: 0;
             z-index: -1;
-            background: linear-gradient(to bottom,
-                    transparent 50%,
-                    var(--bg) 100%);
+
+            background:
+                linear-gradient(90deg,
+                    rgba(7, 25, 35, .90),
+                    rgba(7, 25, 35, .68)),
+                linear-gradient(0deg,
+                    var(--bg),
+                    transparent 65%),
+                url("worquers-background-images/hero-datacenter.jpg") center / cover no-repeat;
         }
 
         .eyebrow,
-        .section-label {
+        .label {
             color: var(--lime);
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
-            letter-spacing: .18em;
+            letter-spacing: .17em;
         }
 
-        .eyebrow {
-            margin-bottom: 27px;
+        h1,
+        h2 {
+            font-family: "Space Grotesk", sans-serif;
+            letter-spacing: -.055em;
         }
 
         h1 {
-            font-size: clamp(43px, 8vw, 82px);
+            font-size: clamp(42px, 7vw, 78px);
             line-height: 1.06;
-            letter-spacing: -.055em;
-            margin-bottom: 28px;
+            margin: 23px 0 20px;
         }
 
-        h1 span,
-        h2 span {
+        h1 span {
             color: var(--lime);
         }
 
-        .hero-description {
-            max-width: 610px;
-            color: #e0ebec;
-            font-size: clamp(16px, 2vw, 19px);
-            line-height: 1.8;
+        .intro {
+            color: #e0ebed;
+            max-width: 620px;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 40px;
         }
 
-        /* CONTENT */
-
-        .section {
-            padding: 80px 0;
-            border-bottom: 1px solid var(--line);
+        .section-title {
+            margin: 0 0 18px;
+            font-size: 13px;
+            letter-spacing: .08em;
         }
 
-        .section-label {
-            margin-bottom: 25px;
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-bottom: 43px;
         }
 
-        h2 {
-            font-size: clamp(32px, 5vw, 52px);
-            line-height: 1.15;
-            letter-spacing: -.045em;
-            margin-bottom: 25px;
-        }
-
-        .intro-copy {
-            max-width: 760px;
-            color: var(--muted);
-            font-size: 17px;
-            line-height: 1.85;
-        }
-
-        .features {
-            margin-top: 45px;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1px;
-            background: var(--line);
+        .role {
             border: 1px solid var(--line);
+            background: rgba(7, 25, 35, .65);
+            padding: 12px 16px;
+            font-size: 13px;
         }
 
-        .feature {
-            padding: 30px;
-            background: var(--surface);
+        .application {
+            border-top: 1px solid var(--line);
+            padding-top: 30px;
         }
 
-        .feature-number {
-            display: block;
-            color: var(--lime);
-            font-size: 11px;
-            margin-bottom: 32px;
+        .application h2 {
+            font-size: clamp(25px, 4vw, 36px);
+            margin: 13px 0;
         }
 
-        .feature h3 {
-            font-size: 21px;
-            margin-bottom: 12px;
-        }
-
-        .feature p {
+        .application p {
+            max-width: 740px;
             color: var(--muted);
             font-size: 14px;
-            line-height: 1.75;
-            margin-bottom: 0;
+            line-height: 1.8;
+            margin: 0 0 16px;
         }
 
-        /* EMAIL CHECKLIST */
-
-        .checklist {
-            margin: 35px 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .checklist li {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            padding: 19px 0;
-            border-bottom: 1px solid var(--line);
-            line-height: 1.7;
-            color: #dbe7e9;
-        }
-
-        .checklist li::before {
-            content: "+";
-            color: var(--lime);
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .checklist strong {
+        .application strong {
             color: var(--white);
         }
 
-        .notice {
-            border-left: 2px solid var(--lime);
-            padding: 16px 20px;
-            margin-top: 30px;
-            background: rgba(149, 214, 99, .055);
-            color: var(--muted);
-            font-size: 14px;
-            line-height: 1.75;
-        }
-
-        /* APPLICATION */
-
-        .apply {
-            padding: 85px 0 100px;
-            text-align: center;
-        }
-
-        .apply p {
-            max-width: 620px;
-            margin: 0 auto 30px;
-            color: var(--muted);
-            line-height: 1.8;
-        }
-
-        .email-address {
-            display: block;
-            margin-bottom: 30px;
-            color: var(--lime);
-            font-family: "Space Grotesk", sans-serif;
-            font-size: clamp(20px, 4vw, 33px);
-            font-weight: 600;
-            overflow-wrap: anywhere;
-        }
-
-        .button {
+        .email-button {
             display: inline-flex;
-            justify-content: center;
             align-items: center;
-            min-height: 56px;
-            padding: 17px 30px;
+            justify-content: center;
+            min-height: 54px;
+            padding: 16px 27px;
+            margin-top: 12px;
             background: var(--lime);
             color: var(--bg);
             font-size: 12px;
             font-weight: 700;
-            letter-spacing: .08em;
+            letter-spacing: .09em;
             text-align: center;
             transition: background .2s;
         }
 
-        .button:hover {
+        .email-button:hover {
             background: #b3e061;
         }
 
-        .small-note {
-            display: block;
-            margin-top: 23px;
+        .email {
+            margin-top: 17px;
+            color: var(--white);
+            font-size: 14px;
+        }
+
+        .note {
             color: var(--muted);
             font-size: 12px;
+            margin-top: 20px;
             line-height: 1.7;
         }
 
-        /* FOOTER */
-
         footer {
-            padding: 30px 0;
+            padding: 25px 0;
             border-top: 1px solid var(--line);
             color: var(--muted);
-            font-size: 12px;
+            font-size: 11px;
         }
 
         .footer-inner {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px;
         }
 
-        @media (min-width: 700px) {
-            .features {
-                grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 600px) {
+            main {
+                padding-top: 55px;
             }
 
-            .section {
-                padding: 100px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-inner {
-                min-height: 72px;
-            }
-
-            .brand {
+            .role {
                 font-size: 12px;
+                padding: 11px 13px;
             }
 
-            .brand strong {
-                font-size: 24px;
-            }
-
-            .hero {
-                padding: 75px 0;
-            }
-
-            .section {
-                padding: 65px 0;
-            }
-
-            .apply {
-                padding: 70px 0;
-            }
-
-            .button {
+            .email-button {
                 width: 100%;
+            }
+
+            .intro {
+                font-size: 15px;
             }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-
-            .button {
+            .email-button {
                 transition: none;
             }
         }
@@ -398,251 +258,94 @@
 
 <body>
 
-    <header class="header">
-        <div class="container header-inner">
-
-            <a href="index.html" class="brand" aria-label="Worquers homepage">
+    <header>
+        <div class="container navigation">
+            <a class="brand" href="index.html">
                 <strong>W.</strong> WORQUERS
             </a>
 
             <a class="back" href="index.html">
                 BACK TO HOME
             </a>
-
         </div>
     </header>
 
     <main>
+        <div class="container">
 
-        <!-- INTRODUCTION -->
+            <p class="eyebrow">
+                JOIN / WORQUERS WORKFORCE
+            </p>
 
-        <section class="hero">
-            <div class="container">
+            <h1>
+                YOUR NEXT PROJECT<br>
+                <span>STARTS HERE.</span>
+            </h1>
 
-                <p class="eyebrow">
-                    WORQUERS / JOIN THE WORKFORCE
-                </p>
+            <p class="intro">
+                Connect with potential data center
+                and infrastructure opportunities
+                across the United States.
+            </p>
 
-                <h1>
-                    YOUR SKILLS.<br>
-                    <span>YOUR NEXT PROJECT.</span>
-                </h1>
+            <h2 class="section-title">
+                POSITIONS OF INTEREST
+            </h2>
 
-                <p class="hero-description">
-                    Be part of the workforce building
-                    tomorrow's data centers and critical
-                    infrastructure. Introduce yourself
-                    to Worquers and tell us where
-                    your experience can make an impact.
-                </p>
-
+            <div class="roles">
+                <span class="role">Data Center Technician</span>
+                <span class="role">Fiber Optic Technician</span>
+                <span class="role">Team Lead</span>
+                <span class="role">Foreman</span>
+                <span class="role">Site Superintendent</span>
+                <span class="role">Project Manager</span>
+                <span class="role">QA/QC Technician</span>
+                <span class="role">Logistics Coordinator</span>
             </div>
-        </section>
 
-        <!-- WHY JOIN -->
+            <section class="application">
 
-        <section class="section">
-            <div class="container">
+                <span class="label">HOW TO APPLY</span>
 
-                <p class="section-label">01 / OPPORTUNITY</p>
-
-                <h2>
-                    BUILT FOR PEOPLE<br>
-                    <span>WHO BUILD.</span>
-                </h2>
-
-                <p class="intro-copy">
-                    Whether you specialize in structured
-                    cabling, fiber optics, installation,
-                    testing, or field leadership,
-                    we'd like to hear from you.
-                    Worquers is developing connections
-                    between skilled professionals
-                    and infrastructure projects
-                    across the United States.
-                </p>
-
-                <div class="features">
-
-                    <div class="feature">
-                        <span class="feature-number">01</span>
-
-                        <h3>NATIONWIDE PROJECTS</h3>
-
-                        <p>
-                            Express your interest in potential
-                            assignments across the United States.
-                            Tell us where you're willing to work.
-                        </p>
-                    </div>
-
-                    <div class="feature">
-                        <span class="feature-number">02</span>
-
-                        <h3>SKILLS FIRST</h3>
-
-                        <p>
-                            Highlight your hands-on experience,
-                            technical capabilities, certifications,
-                            and leadership background.
-                        </p>
-                    </div>
-
-                    <div class="feature">
-                        <span class="feature-number">03</span>
-
-                        <h3>SIMPLE INTRODUCTION</h3>
-
-                        <p>
-                            No lengthy forms or accounts.
-                            Send one clear email and a
-                            one-page résumé to introduce yourself.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- WHAT TO EMAIL -->
-
-        <section class="section" id="requirements">
-            <div class="container">
-
-                <p class="section-label">
-                    02 / YOUR INTRODUCTION
-                </p>
-
-                <h2>
-                    ONE PAGE.<br>
-                    <span>ONE EMAIL.</span>
-                </h2>
-
-                <p class="intro-copy">
-                    Keep it short and professional.
-                    Attach a one-page PDF résumé and
-                    include the following details
-                    in your email.
-                </p>
-
-                <ul class="checklist">
-
-                    <li>
-                        <span>
-                            <strong>Name and contact information</strong>
-                            — your full name, phone number,
-                            and current city and state.
-                        </span>
-                    </li>
-
-                    <li>
-                        <span>
-                            <strong>Experience and skills</strong>
-                            — your years of experience,
-                            main trade, technical skills,
-                            relevant certifications,
-                            and team leadership experience.
-                        </span>
-                    </li>
-
-                    <li>
-                        <span>
-                            <strong>Work authorization</strong>
-                            — confirm whether you are
-                            legally authorized to work
-                            in the United States.
-                        </span>
-                    </li>
-
-                    <li>
-                        <span>
-                            <strong>Availability</strong>
-                            — your earliest possible start date,
-                            any scheduling restrictions,
-                            and how long you're available
-                            for assignments.
-                        </span>
-                    </li>
-
-                    <li>
-                        <span>
-                            <strong>Travel preferences</strong>
-                            — confirm whether you're available
-                            for nationwide projects or
-                            prefer specific states or regions.
-                        </span>
-                    </li>
-
-                    <li>
-                        <span>
-                            <strong>One-page PDF résumé</strong>
-                            — summarize your relevant
-                            work experience and recent projects.
-                            A professional photo is optional.
-                        </span>
-                    </li>
-
-                </ul>
-
-                <div class="notice">
-                    Please do not email Social Security numbers,
-                    identity documents, passports,
-                    or work authorization documents.
-                    A résumé and a simple confirmation
-                    of work authorization are sufficient
-                    for your initial introduction.
-                </div>
-
-            </div>
-        </section>
-
-        <!-- EMAIL APPLICATION -->
-
-        <section class="apply" id="apply">
-            <div class="container">
-
-                <p class="section-label">
-                    03 / GET STARTED
-                </p>
-
-                <h2>
-                    READY FOR<br>
-                    <span>WHAT'S NEXT?</span>
-                </h2>
+                <h2>ONE PAGE. ONE EMAIL.</h2>
 
                 <p>
-                    Tell us who you are, what you do,
-                    and when you're available.
-                    We'll review your introduction
-                    for potential opportunities
-                    aligned with your experience.
+                    Send a <strong>one-page PDF résumé</strong>
+                    and include:
                 </p>
 
-                <a class="email-address" href="mailto:join@worquers.com">
+                <p>
+                    <strong>Position</strong> /
+                    Years of experience /
+                    Current city & state /
+                    U.S. work authorization /
+                    Earliest start date /
+                    Availability for nationwide projects.
+                </p>
+
+                <a class="email-button"
+                    href="mailto:join@worquers.com?subject=Worquers%20Workforce%20Application&body=Position%3A%0AYears%20of%20experience%3A%0ACity%20and%20state%3A%0APhone%20number%3A%0AU.S.%20work%20authorization%3A%0AEarliest%20start%20date%3A%0ANationwide%20travel%20availability%3A%0A%0APlease%20attach%20your%20one-page%20PDF%20resume.">
+                    SEND YOUR INTRODUCTION
+                </a>
+
+                <div class="email">
                     join@worquers.com
-                </a>
+                </div>
 
-                <a class="button"
-                    href="mailto:join@worquers.com?subject=Worquers%20Workforce%20Introduction&body=Full%20name%3A%0ACity%20and%20state%3A%0APhone%3A%0AMain%20skills%20and%20experience%3A%0AU.S.%20work%20authorization%20(Yes%2FNo)%3A%0AEarliest%20start%20date%3A%0AAvailability%20duration%3A%0ANationwide%20travel%20(Yes%2FNo%2FRegions)%3A%0A%0APlease%20remember%20to%20attach%20your%20one-page%20PDF%20resume.">
-                    EMAIL YOUR INTRODUCTION
-                </a>
+                <div class="note">
+                    Professional photo optional.
+                    Please do not send identity documents.
+                    Opportunities are subject to project availability.
+                </div>
 
-                <span class="small-note">
-                    Attach your PDF résumé before sending.
-                    Project opportunities and placements
-                    are not guaranteed.
-                </span>
+            </section>
 
-            </div>
-        </section>
-
+        </div>
     </main>
 
     <footer>
         <div class="container footer-inner">
-            <span>© 2026 WORQUERS</span>
-
+            <span>© 2024 WORQUERS</span>
             <a href="mailto:info@worquers.com">
                 GENERAL INQUIRIES
             </a>
