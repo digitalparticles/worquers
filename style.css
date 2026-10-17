@@ -795,3 +795,21 @@ h2 span {
         transform: none;
     }
 }
+
+
+.footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.footer-legal a {
+    color: #b2c4ca;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    color: #95d663;
+}
