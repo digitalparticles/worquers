@@ -1,380 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZF5HJV516"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-PZF5HJV516');
-    </script>
-
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#071923">
-
-    <meta name="description"
-        content="Join the Worquers infrastructure workforce. Send a one-page résumé for potential nationwide data center projects.">
-
-    <title>Join Worquers | Your Next Project</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
-    <style>
-        :root {
-            color-scheme: dark;
-            --bg: #071923;
-            --white: #f4f8fa;
-            --muted: #bdced2;
-            --lime: #95d663;
-            --line: rgba(180, 220, 220, .22);
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            background: var(--bg);
-            color: var(--white);
-            font-family: "DM Sans", sans-serif;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        a:focus-visible {
-            outline: 2px solid var(--lime);
-            outline-offset: 4px;
-        }
-
-        .container {
-            width: min(100% - 44px, 1100px);
-            margin: auto;
-        }
-
-        header {
-            border-bottom: 1px solid var(--line);
-            background: var(--bg);
-        }
-
-        .navigation {
-            min-height: 76px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .brand {
-            font-family: "Space Grotesk", sans-serif;
-            font-weight: 700;
-            letter-spacing: .12em;
-            font-size: 14px;
-        }
-
-        .brand strong {
-            color: var(--lime);
-            font-size: 26px;
-            margin-right: 10px;
-        }
-
-        .back {
-            color: var(--muted);
-            font-size: 11px;
-            letter-spacing: .08em;
-        }
-
-        main {
-            position: relative;
-            isolation: isolate;
-            min-height: calc(100svh - 145px);
-            padding: 65px 0 80px;
-            overflow: hidden;
-        }
-
-        main::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-
-            background:
-                linear-gradient(90deg,
-                    rgba(7, 25, 35, .90),
-                    rgba(7, 25, 35, .68)),
-                linear-gradient(0deg,
-                    var(--bg),
-                    transparent 65%),
-                url("worquers-background-images/hero-datacenter.jpg") center / cover no-repeat;
-        }
-
-        .eyebrow,
-        .label {
-            color: var(--lime);
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: .17em;
-        }
-
-        h1,
-        h2 {
-            font-family: "Space Grotesk", sans-serif;
-            letter-spacing: -.055em;
-        }
-
-        h1 {
-            font-size: clamp(42px, 7vw, 78px);
-            line-height: 1.06;
-            margin: 23px 0 20px;
-        }
-
-        h1 span {
-            color: var(--lime);
-        }
-
-        .intro {
-            color: #e0ebed;
-            max-width: 620px;
-            font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
-
-        .section-title {
-            margin: 0 0 18px;
-            font-size: 13px;
-            letter-spacing: .08em;
-        }
-
-        .roles {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 9px;
-            margin-bottom: 43px;
-        }
-
-        .role {
-            border: 1px solid var(--line);
-            background: rgba(7, 25, 35, .65);
-            padding: 12px 16px;
-            font-size: 13px;
-        }
-
-        .application {
-            border-top: 1px solid var(--line);
-            padding-top: 30px;
-        }
-
-        .application h2 {
-            font-size: clamp(25px, 4vw, 36px);
-            margin: 13px 0;
-        }
-
-        .application p {
-            max-width: 740px;
-            color: var(--muted);
-            font-size: 14px;
-            line-height: 1.8;
-            margin: 0 0 16px;
-        }
-
-        .application strong {
-            color: var(--white);
-        }
-
-        .email-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 54px;
-            padding: 16px 27px;
-            margin-top: 12px;
-            background: var(--lime);
-            color: var(--bg);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: .09em;
-            text-align: center;
-            transition: background .2s;
-        }
-
-        .email-button:hover {
-            background: #b3e061;
-        }
-
-        .email {
-            margin-top: 17px;
-            color: var(--white);
-            font-size: 14px;
-        }
-
-        .note {
-            color: var(--muted);
-            font-size: 12px;
-            margin-top: 20px;
-            line-height: 1.7;
-        }
-
-        footer {
-            padding: 25px 0;
-            border-top: 1px solid var(--line);
-            color: var(--muted);
-            font-size: 11px;
-        }
-
-        .footer-inner {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        @media (max-width: 600px) {
-            main {
-                padding-top: 55px;
-            }
-
-            .role {
-                font-size: 12px;
-                padding: 11px 13px;
-            }
-
-            .email-button {
-                width: 100%;
-            }
-
-            .intro {
-                font-size: 15px;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .email-button {
-                transition: none;
-            }
-        }
-    </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#071923">
+<title>Join Worquers | Data Center Careers</title><meta name="description" content="Join the Worquers talent network for data center infrastructure work.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#071923;--panel:#0d2935;--line:#294b53;--text:#f0f7f7;--muted:#b8cdd0;--lime:#95d663}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 'DM Sans',Arial,sans-serif}a{color:inherit}header{border-bottom:1px solid var(--line)}.wrap{width:min(850px,calc(100% - 38px));margin:auto}header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:75px}.logo{text-decoration:none;font:700 18px 'Space Grotesk',sans-serif;letter-spacing:.1em}.logo b{color:var(--lime);font-size:24px}.back{font-size:12px;color:var(--muted)}.hero{padding:70px 0 35px;background:linear-gradient(90deg,rgba(7,25,35,.93),rgba(7,25,35,.66)),url('worquers-background-images/hero-datacenter.jpg') center/cover}.eyebrow{color:var(--lime);font-size:11px;font-weight:700;letter-spacing:.17em}h1{font:700 clamp(36px,6vw,58px)/1.1 'Space Grotesk',sans-serif;letter-spacing:-.05em;margin:13px 0}p{color:var(--muted)}form{padding:30px 0 55px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}label{display:block;font-size:13px;color:#e3ecec}label span{display:block;margin-bottom:8px}input,select,textarea{font:inherit;display:block;width:100%;min-height:47px;padding:12px;background:#09212b;border:1px solid var(--line);border-radius:0;color:var(--text)}textarea{min-height:95px;resize:vertical}.wide{grid-column:1/-1}select{appearance:auto}input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--lime);outline-offset:2px}.checkbox{display:flex;gap:12px;align-items:start;margin:22px 0;color:var(--muted)}.checkbox input{width:18px;min-height:18px;flex:0 0 18px;accent-color:var(--lime);margin:4px 0}.checkbox span{display:block}.btn{background:var(--lime);border:0;padding:16px 27px;font:700 12px 'DM Sans',sans-serif;letter-spacing:.09em;color:var(--bg);cursor:pointer;min-height:53px}.btn:disabled{opacity:.55;cursor:wait}.note{font-size:12px}.status{min-height:25px;color:var(--lime);margin-top:14px}footer{border-top:1px solid var(--line);padding:24px 0;font-size:12px;color:var(--muted)}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px}.hide{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}@media(max-width:600px){.grid{grid-template-columns:1fr}.wide{grid-column:auto}.hero{padding:52px 0 26px}}
+</style>
 </head>
-
 <body>
-
-    <header>
-        <div class="container navigation">
-            <a class="brand" href="index.html">
-                <strong>W.</strong> WORQUERS
-            </a>
-
-            <a class="back" href="index.html">
-                BACK TO HOME
-            </a>
-        </div>
-    </header>
-
-    <main>
-        <div class="container">
-
-            <p class="eyebrow">
-                JOIN / WORQUERS WORKFORCE
-            </p>
-
-            <h1>
-                YOUR NEXT PROJECT<br>
-                <span>STARTS HERE.</span>
-            </h1>
-
-            <p class="intro">
-                Connect with potential data center
-                and infrastructure opportunities
-                across the United States.
-            </p>
-
-            <h2 class="section-title">
-                POSITIONS OF INTEREST
-            </h2>
-
-            <div class="roles">
-                <span class="role">Data Center Technician</span>
-                <span class="role">Fiber Optic Technician</span>
-                <span class="role">Team Lead</span>
-                <span class="role">Foreman</span>
-                <span class="role">Site Superintendent</span>
-                <span class="role">Project Manager</span>
-                <span class="role">QA/QC Technician</span>
-                <span class="role">Logistics Coordinator</span>
-            </div>
-
-            <section class="application">
-
-                <span class="label">HOW TO APPLY</span>
-
-                <h2>ONE PAGE. ONE EMAIL.</h2>
-
-                <p>
-                    Send a <strong>one-page PDF résumé</strong>
-                    and include:
-                </p>
-
-                <p>
-                    <strong>Position</strong> /
-                    Years of experience /
-                    Current city & state /
-                    U.S. work authorization /
-                    Earliest start date /
-                    Availability for nationwide projects.
-                </p>
-
-                <a class="email-button"
-                    href="mailto:join@worquers.com?subject=Worquers%20Workforce%20Application&body=Position%3A%0AYears%20of%20experience%3A%0ACity%20and%20state%3A%0APhone%20number%3A%0AU.S.%20work%20authorization%3A%0AEarliest%20start%20date%3A%0ANationwide%20travel%20availability%3A%0A%0APlease%20attach%20your%20one-page%20PDF%20resume.">
-                    SEND YOUR INTRODUCTION
-                </a>
-
-                <div class="email">
-                    join@worquers.com
-                </div>
-
-                <div class="note">
-                    Professional photo optional.
-                    Please do not send identity documents.
-                    Opportunities are subject to project availability.
-                </div>
-
-            </section>
-
-        </div>
-    </main>
-
-    <footer>
-        <div class="container footer-inner">
-            <span>© 2026 WORQUERS</span>
-            <a href="mailto:info@worquers.com">
-                General Inquires
-            </a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms & Conditions</a>
-        </div>
-
-
-
-
-
-
-
-
-    </footer>
-
-</body>
-
-</html>
+<header><div class="wrap"><a class="logo" href="index.html"><b>W.</b> WORQUERS</a><a class="back" href="index.html">BACK TO HOME</a></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">FOR INFRASTRUCTURE PROFESSIONALS</div><h1>BUILD WHAT'S NEXT.</h1><p>Join the Worquers talent network for upcoming data center projects across the United States.</p></div></section>
+<main class="wrap"><form id="candidateForm">
+<div class="grid">
+<label><span>Full name *</span><input name="full_name" autocomplete="name" maxlength="150" required></label>
+<label><span>Email address *</span><input type="email" name="email" autocomplete="email" maxlength="254" required></label>
+<label><span>Phone number *</span><input type="tel" name="phone" autocomplete="tel" maxlength="50" required></label>
+<label><span>City and state *</span><input name="location" placeholder="e.g. Atlanta, GA" maxlength="150" required></label>
+<label><span>Primary role *</span><select name="role" required><option value="">Select your role</option><option>Data Center Technician</option><option>Fiber Optic Technician</option><option>Team Lead</option><option>Foreman</option><option>Site Superintendent</option><option>Project Manager</option><option>QA/QC Technician</option><option>Logistics Coordinator</option><option>Other</option></select></label>
+<label><span>Years of experience *</span><input type="number" name="years_experience" min="0" max="60" step="1" required></label>
+<label><span>Earliest available start date</span><input type="date" name="available_from"></label>
+<label><span>Willing to travel? *</span><select name="willing_to_travel" required><option value="">Select an option</option><option value="yes">Yes, nationwide</option><option value="regional">Regional travel only</option><option value="no">Local projects only</option></select></label>
+<label><span>Are you currently legally authorized to work in the United States? *</span><select name="work_authorized_us" required><option value="">Select one</option><option value="yes">Yes</option><option value="no">No</option></select></label>
+<label><span>Will you now or in the future require employer sponsorship to work in the United States? *</span><select name="requires_sponsorship" required><option value="">Select one</option><option value="yes">Yes</option><option value="no">No</option></select></label>
+<label><span>Resume (PDF, maximum 5 MB) *</span><input type="file" name="resume" accept=".pdf,application/pdf" required><small>PDF only. Do not upload ID documents or Social Security information.</small></label>
+<label class="wide"><span>Skills and certifications (optional)</span><textarea name="skills" maxlength="1500" placeholder="e.g. Fiber pulling, patching, labeling, testing, OSHA 10"></textarea></label>
+</div>
+<div class="hide" aria-hidden="true"><label>Company website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+<label class="checkbox"><input type="checkbox" name="consent" required><span>I agree that Worquers may contact me about relevant work opportunities and process my application in accordance with the <a href="privacy.html">Privacy Policy</a>. *</span></label>
+<p class="note">Upload a résumé in PDF format (5 MB maximum). Do not submit Social Security numbers or identity documents. Applying does not guarantee placement.</p>
+<button class="btn" id="submitBtn" type="submit">SUBMIT APPLICATION</button><div class="status" id="formMessage" role="status" aria-live="polite"></div>
+</form></main>
+<footer><div class="wrap"><span>© Worquers</span><span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="mailto:join@worquers.com">join@worquers.com</a></span></div></footer>
+<script>
+(()=>{
+ const form=document.getElementById('candidateForm');const button=document.getElementById('submitBtn');const message=document.getElementById('formMessage');
+ const url='https://begudxvyjlhcquzptxom.supabase.co/functions/v1/submit-candidate';
+ form.addEventListener('submit',async event=>{
+  event.preventDefault();if(!form.reportValidity())return;
+  button.disabled=true;button.textContent='SENDING...';message.textContent='Submitting your application...';
+  const data=new FormData(form);const pdf=form.elements.resume.files[0];if(!pdf||pdf.size>5*1024*1024||!pdf.name.toLowerCase().endsWith('.pdf')){message.textContent='Please select a PDF résumé no larger than 5 MB.';button.disabled=false;button.textContent='SUBMIT APPLICATION';return;}data.set('consent',form.elements.consent.checked?'true':'false');
+  try{
+   const response=await fetch(url,{method:'POST',body:data});
+   const result=await response.json().catch(()=>({}));if(!response.ok||!result.ok)throw Error(result.error||'Submission failed.');
+   form.reset();message.textContent='Application received. Thank you — we will contact you if there is a match.';
+  }catch(error){message.textContent='Unable to send right now. Please try again or email join@worquers.com.';console.error('Application error',error);}
+  finally{button.disabled=false;button.textContent='SUBMIT APPLICATION';}
+ });
+})();
+</script>
+</body></html>
