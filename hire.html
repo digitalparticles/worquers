@@ -378,6 +378,200 @@
         scroll-behavior: auto
       }
     }
+
+
+    /* WORQUERS ADVANTAGE */
+
+    .wq-advantage {
+      max-width: 1180px;
+      margin: 0 auto 75px;
+      padding: 40px 0;
+      color: #ffffff;
+    }
+
+    .wq-advantage-header {
+      margin-bottom: 34px;
+    }
+
+    .wq-eyebrow {
+      display: block;
+      margin-bottom: 15px;
+      color: #95D663;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+    }
+
+    .wq-advantage-header h2 {
+      margin: 0;
+      font-size: clamp(27px, 3.5vw, 46px);
+      font-weight: 750;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+    }
+
+    .wq-advantage-header h2 span {
+      display: block;
+      color: #95D663;
+    }
+
+    .wq-advantage-header p {
+      max-width: 660px;
+      margin: 18px 0 0;
+      color: #aabfc7;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* SIX CARD GRID */
+
+    .wq-advantage-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .wq-advantage-card {
+      position: relative;
+      min-height: 130px;
+      padding: 25px;
+      overflow: hidden;
+
+      background: rgba(16, 40, 51, 0.70);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 10px;
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .wq-advantage-card::after {
+      content: "";
+      position: absolute;
+      left: 25px;
+      right: 25px;
+      bottom: 0;
+      height: 2px;
+      background: #95D663;
+      opacity: 0;
+      transform: scaleX(0.3);
+
+      transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .wq-advantage-card:hover {
+      transform: translateY(-3px);
+      background: rgba(22, 55, 66, 0.88);
+      border-color: rgba(149, 214, 99, 0.35);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .wq-advantage-card:hover::after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+
+    .wq-card-icon {
+      margin-bottom: 21px;
+      color: #95D663;
+      font-family: Arial, sans-serif;
+      font-size: 23px;
+      line-height: 1;
+    }
+
+    .wq-advantage-card h3 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: -0.2px;
+    }
+
+    /* DIRECT CONTACT */
+
+    .wq-contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+
+      margin-top: 25px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .wq-contact span {
+      color: #aabfc7;
+      font-size: 14px;
+    }
+
+    .wq-contact a {
+      color: #95D663;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .wq-contact a:hover {
+      opacity: 0.75;
+      text-decoration: underline;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 850px) {
+      .wq-advantage-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 520px) {
+      .wq-advantage {
+        margin-bottom: 50px;
+        padding: 25px 0;
+      }
+
+      .wq-advantage-grid {
+        gap: 9px;
+      }
+
+      .wq-advantage-card {
+        min-height: 115px;
+        padding: 17px;
+      }
+
+      .wq-card-icon {
+        margin-bottom: 16px;
+        font-size: 20px;
+      }
+
+      .wq-advantage-card h3 {
+        font-size: 13px;
+      }
+
+      .wq-contact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .wq-advantage-card,
+      .wq-advantage-card::after {
+        transition: none;
+      }
+    }
   </style>
 </head>
 
@@ -395,6 +589,75 @@
         </p>
       </div>
     </section>
+
+    <!-- grid added 10-18 -->
+
+
+    <!-- WORQUERS ADVANTAGE -->
+    <section class="wq-advantage" aria-labelledby="wq-advantage-title">
+
+      <div class="wq-advantage-header">
+        <span class="wq-eyebrow">THE WORQUERS ADVANTAGE</span>
+
+        <h2 id="wq-advantage-title">
+          PRECISION-MATCHED PROFESSIONALS.
+          <span>BUILT TO SCALE.</span>
+        </h2>
+
+        <p>
+          The right expertise, the right team, precisely when
+          your infrastructure project demands it.
+        </p>
+      </div>
+
+      <div class="wq-advantage-grid">
+
+        <div class="wq-advantage-card">
+          <div class="wq-card-icon">◇</div>
+          <h3>Flexible Teams</h3>
+        </div>
+
+        <div class="wq-advantage-card">
+          <div class="wq-card-icon">◎</div>
+          <h3>Precision Skill Matching</h3>
+        </div>
+
+        <div class="wq-advantage-card">
+          <div class="wq-card-icon">⌁</div>
+          <h3>Lower Hiring Overhead</h3>
+        </div>
+
+        <div class="wq-advantage-card">
+          <div class="wq-card-icon">≡</div>
+          <h3>Simplified Coordination</h3>
+        </div>
+
+        <div class="wq-advantage-card">
+          <div class="wq-card-icon">✓</div>
+          <h3>Execution First</h3>
+        </div>
+
+        <div class="wq-advantage-card">
+          <div class="wq-card-icon">✳</div>
+          <h3>Nationwide Reach</h3>
+        </div>
+
+      </div>
+
+      <div class="wq-contact">
+        <span>Prefer to discuss your workforce needs directly?</span>
+
+        <a href="mailto:hire@worquers.com?subject=Workforce%20Inquiry">
+          hire@worquers.com
+        </a>
+      </div>
+
+    </section>
+    <!-- END WORQUERS ADVANTAGE -->
+
+
+
+
     <form id="crewForm" class="wrap" novalidate>
       <section class="section">
         <div class="section-tag">01 / SERVICE MODEL</div>
