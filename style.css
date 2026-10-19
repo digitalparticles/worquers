@@ -813,3 +813,19 @@ h2 span {
 .footer-legal a:hover {
     color: #95d663;
 }
+
+/* More separation before Refer a Technician section */
+.referral-section {
+    margin-top: 100px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+    .referral-section {
+        margin-top: 60px;
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+}

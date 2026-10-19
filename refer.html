@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071923">
+<title>Refer a Technician | Worquers</title>
+<meta name="description" content="Refer trusted data center technicians to the Worquers workforce network.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#071923;--panel:#0b2631;--line:#294b53;--white:#f0f7f7;--muted:#b8cdd0;--lime:#95d663}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font:15px/1.55 'DM Sans',Arial,sans-serif}a{color:inherit}a:hover{color:var(--lime)}.wrap{width:min(860px,calc(100% - 36px));margin:0 auto}header{border-bottom:1px solid var(--line)}header .wrap{display:flex;justify-content:space-between;align-items:center;min-height:76px}.logo{text-decoration:none;font:700 18px 'Space Grotesk',sans-serif;letter-spacing:.09em}.logo b{color:var(--lime);font-size:24px}.back{color:var(--muted);font-size:12px}.hero{padding:66px 0 42px;background:linear-gradient(90deg,rgba(7,25,35,.96),rgba(7,25,35,.68)),url('worquers-background-images/hero-datacenter.jpg') center/cover}.eyebrow{font-size:11px;color:var(--lime);font-weight:700;letter-spacing:.17em;text-transform:uppercase}h1{font:700 clamp(36px,6vw,58px)/1.08 'Space Grotesk',sans-serif;letter-spacing:-.045em;margin:12px 0 18px}p{color:var(--muted)}.hero p{max-width:590px;margin:0}.form{padding:42px 0 60px}.section{padding:24px 0;border-bottom:1px solid var(--line)}h2{font:600 20px 'Space Grotesk',sans-serif;margin:0 0 8px}.helper{margin:0 0 20px;font-size:13px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}label{display:block;font-size:13px}label span{display:block;margin-bottom:7px}input[type=text],input[type=email]{display:block;width:100%;min-height:47px;border:1px solid var(--line);border-radius:0;background:var(--panel);color:var(--white);padding:12px;font:inherit}input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--lime);outline-offset:2px}.person{padding:22px;margin-top:16px;border:1px solid var(--line);background:rgba(13,41,53,.65)}.person h3{font:600 16px 'Space Grotesk',sans-serif;margin:0 0 15px}.checkbox{display:flex;align-items:flex-start;gap:11px;margin-top:18px;color:var(--muted);font-size:13px}.checkbox input{width:18px;height:18px;flex:0 0 18px;margin:2px 0 0;accent-color:var(--lime)}.checkbox span{line-height:1.5}.submit{display:block;min-height:53px;background:var(--lime);border:0;color:#071923;padding:16px 25px;font:700 12px 'DM Sans',sans-serif;letter-spacing:.08em;cursor:pointer}.submit:disabled{opacity:.5;cursor:wait}.actions{margin-top:28px}.status{min-height:28px;margin-top:14px;color:var(--lime);font-size:13px}.fine{font-size:12px}.hidden{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px}footer .wrap{display:flex;gap:15px;justify-content:space-between;flex-wrap:wrap}@media(max-width:620px){.grid{grid-template-columns:1fr}.hero{padding:51px 0 35px}.person{padding:18px}.form{padding-top:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="index.html"><b>W.</b> WORQUERS</a><a class="back" href="index.html">BACK TO HOME</a></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">GROW THE NETWORK</div><h1>REFER A TECHNICIAN.</h1><p>Know talented people in data center infrastructure? Recommend up to three technicians you would like to work with on future projects.</p></div></section>
+<main class="wrap"><form class="form" id="referralForm">
+<section class="section"><h2>Your information</h2><p class="helper">Tell us who is making the recommendation.</p><div class="grid">
+<label><span>Your full name *</span><input name="applicant_name" type="text" autocomplete="name" maxlength="150" required></label>
+<label><span>Your email address *</span><input name="applicant_email" type="email" autocomplete="email" maxlength="254" required></label>
+</div></section>
+<section class="section"><h2>People you'd like to refer</h2><p class="helper">Enter at least one technician. You can recommend up to three. Please ask their permission before sharing their information.</p>
+<div class="person"><h3>Technician 1</h3><div class="grid">
+<label><span>Full name</span><input name="referral_1_name" type="text" maxlength="150" autocomplete="off"></label>
+<label><span>Email address</span><input name="referral_1_email" type="email" maxlength="254" autocomplete="off"></label>
+</div><label class="checkbox"><input name="referral_1_same_team" type="checkbox"><span>I would like to be on the same team as this person.</span></label></div>
+<div class="person"><h3>Technician 2</h3><div class="grid">
+<label><span>Full name</span><input name="referral_2_name" type="text" maxlength="150" autocomplete="off"></label>
+<label><span>Email address</span><input name="referral_2_email" type="email" maxlength="254" autocomplete="off"></label>
+</div><label class="checkbox"><input name="referral_2_same_team" type="checkbox"><span>I would like to be on the same team as this person.</span></label></div>
+<div class="person"><h3>Technician 3</h3><div class="grid">
+<label><span>Full name</span><input name="referral_3_name" type="text" maxlength="150" autocomplete="off"></label>
+<label><span>Email address</span><input name="referral_3_email" type="email" maxlength="254" autocomplete="off"></label>
+</div><label class="checkbox"><input name="referral_3_same_team" type="checkbox"><span>I would like to be on the same team as this person.</span></label></div>
+</section>
+<div class="hidden" aria-hidden="true"><label>Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+<label class="checkbox"><input name="permission" type="checkbox" required><span>I have permission to share the contact details of the people listed above. I understand that submitting a referral does not guarantee employment or assignment to the same team. *</span></label>
+<p class="fine">We use referral information for recruitment purposes. See our <a href="privacy.html">Privacy Policy</a>. You may refer colleagues without completing another job application.</p>
+<div class="actions"><button class="submit" id="submitBtn" type="submit">SUBMIT REFERRALS</button><div class="status" role="status" aria-live="polite" id="formMessage"></div></div>
+</form></main>
+<footer><div class="wrap"><span>© Worquers</span><span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="mailto:join@worquers.com">join@worquers.com</a></span></div></footer>
+<script>
+(() => {
+  const form = document.getElementById('referralForm');
+  const button = document.getElementById('submitBtn');
+  const message = document.getElementById('formMessage');
+  const endpoint = 'https://begudxvyjlhcquzptxom.supabase.co/functions/v1/submit-referral';
+  const validEmail = value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const people = [];
+    for (let i = 1; i <= 3; i++) {
+      const name = form.elements[`referral_${i}_name`].value.trim();
+      const email = form.elements[`referral_${i}_email`].value.trim();
+      const same_team = form.elements[`referral_${i}_same_team`].checked;
+      if (name || email) {
+        if (!name || !validEmail(email)) {
+          message.textContent = `Complete both the name and email for Technician ${i}.`;
+          return;
+        }
+        people.push({ name, email, same_team });
+      } else if (same_team) {
+        message.textContent = `Add the name and email for Technician ${i}, or uncheck their team preference.`;
+        return;
+      }
+    }
+    if (!people.length) {
+      message.textContent = 'Please add at least one technician to refer.';
+      return;
+    }
+    button.disabled = true;
+    button.textContent = 'SENDING...';
+    message.textContent = 'Sending your referrals...';
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          applicant_name: form.elements.applicant_name.value.trim(),
+          applicant_email: form.elements.applicant_email.value.trim(),
+          referrals: people,
+          permission: form.elements.permission.checked,
+          website: form.elements.website.value
+        })
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.ok) throw new Error(result.error || 'Unable to submit');
+      form.reset();
+      message.textContent = 'Thank you! Your referrals have been sent to Worquers.';
+    } catch (err) {
+      console.error('Referral error', err);
+      message.textContent = 'We could not send your referrals. Please try again later.';
+    } finally {
+      button.disabled = false;
+      button.textContent = 'SUBMIT REFERRALS';
+    }
+  });
+})();
+</script>
+</body>
+</html>
